@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+    function GenerateString(len) {
+      const str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let result = '';
+      for (let i = 0; i < len; i++) {
+        result += str.charAt(Math.floor(Math.random() * str.length));
+      }
+      return result;
+    }
+    let len = prompt();
+    alert("Случайно сгенерированная строка: " + GenerateString(len));
+
+    </script>
+
+  <script>
+    function Find(str) {
+      let count = {};
+      let len = str.length;
+      for (let i = 0; i < len; i++) {
+        let char = str[i];
+        if (count[char]) { count[char]++;
+        } else {
+          count[char] = 1;
+        }
+      }
+      for (let i = 0; i < len; i++) {
+        let char = str[i];
+        if (count[char] === 1) {
+          return char;
+        }
+      }
+      return null;
+      }
+      let str = prompt();
+      let result = Find(str);
+      alert("Самый первый неповторяющийся символ в строке: " + Find(result));
+
+  </script>
+
+
+  </body>
+</html>

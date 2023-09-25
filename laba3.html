@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <script>
+      let admin, name;
+      name = "Джон";
+      admin = name;
+      alert( admin );
+  </script>
+
+
+  <script>
+    let a = prompt("Первое число?", 1);
+    let b = prompt("Второе число?", 2);
+
+  alert(+a + +b); // 12
+  </script>
+
+
+  <script>
+    for (let i = 2; i <= 10; i++) {
+      if (i % 2 == 0) {
+        alert( i );}
+  }
+  </script>
+
+
+  <script>
+    let i = 0;
+    while (i < 3){
+      alert( `number ${i}!` );
+      i++;
+    }
+  </script>
+
+
+  <script>
+    let num;
+    do {
+      num = prompt("Введите число больше 100?", 0);
+  } while (num <= 100 && num);
+  </script>
+
+
+  </body>
+</html>
